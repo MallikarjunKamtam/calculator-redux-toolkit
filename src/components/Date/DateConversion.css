@@ -1,0 +1,31 @@
+.date-body {
+  color: white;
+  background-color: #222;
+  width: fit-content;
+  padding: 5px 30px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.from-date-input,
+.to-date-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.diff-head {
+  text-decoration: underline;
+}
+
+.from-date,
+.to-date {
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.result-diff {
+  color: green;
+}

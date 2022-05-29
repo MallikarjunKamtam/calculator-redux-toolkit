@@ -1,0 +1,21 @@
+.memory-keys-container {
+  display: flex;
+  width: 345px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2px 0;
+}
+
+.memory-key {
+  background-color: #111;
+  width: 56px;
+  height: 50px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.memory-key:hover {
+  box-shadow: 2px 0 2px white;
+}

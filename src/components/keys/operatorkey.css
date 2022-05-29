@@ -1,0 +1,22 @@
+.op-key {
+  width: 100px;
+  height: 60px;
+  background-color: #111;
+  margin: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 2px 0px 1px blue;
+}
+
+.arrow {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.op-key:hover {
+  box-shadow: 2px 0 2px white;
+}

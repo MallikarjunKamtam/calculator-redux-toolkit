@@ -1,0 +1,20 @@
+.total-body {
+  background-color: #333;
+  padding: 3px;
+  border-radius: 5px;
+  outline: 7px solid #111;
+}
+
+.total-body-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.total-body-container:hover {
+  box-shadow: 10px 10px 10px black;
+  transition: all 1s;
+}

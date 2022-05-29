@@ -1,0 +1,31 @@
+.complex-keys-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+}
+
+.complex-key {
+  width: 80px;
+  height: 60px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 2px 0px 1px blue;
+  font-weight: 700;
+}
+
+.complex-keys-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+}
+
+.complex-key:hover {
+  box-shadow: 2px 0 2px white;
+}

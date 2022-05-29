@@ -1,0 +1,50 @@
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 60px;
+  margin: 0;
+}
+.header-main :hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 2s;
+}
+
+.header-section {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-item {
+  /* background-color: #111; */
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+}
+
+.activated {
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  color: black;
+}
+
+.standerd-types {
+  margin: 0;
+}
+
+.header-heading {
+  margin: 0;
+  background-color: black;
+}
+
+.header-item:hover {
+  transform: scale(1.05);
+  color: orange;
+  transition: all 1s;
+}
