@@ -48,9 +48,9 @@ const Header = () => {
             className={(navData) =>
               navData.isActive ? "activated" : "header-item"
             }
-            to="./time/"
+            to="./timeconversion/"
           >
-            Time
+            Time Conversion
           </NavLink>
           <NavLink
             style={navLinkStyle}

@@ -3,6 +3,7 @@ const keys = {
 
   dot: ".",
   sign: "+/-",
+  back: "←",
 
   operators: {
     basic: {

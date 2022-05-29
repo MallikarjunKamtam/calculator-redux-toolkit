@@ -12,9 +12,8 @@ import Energy from "./components/Energy/Energy";
 import Power from "./components/Power/Power";
 import Pressure from "./components/Pressure/Pressure";
 import Speed from "./components/Speed/Speed";
-import Time from "./components/Time/Time";
-import Temperature from "./components/Temperature/Temperature";
 import TimeConversion from "./components/TimeConversion/TimeConversion";
+import Temperature from "./components/Temperature/Temperature";
 import Volume from "./components/Volume/Volume";
 import Weight from "./components/Weight/Weight";
 import Length from "./components/Length/Length";
@@ -41,13 +40,12 @@ function App() {
         <Route path="/dateconversion" element={<DateConversion />}></Route>
         <Route path="/energy" element={<Energy />}></Route>
         <Route path="/power" element={<Power />}></Route>
-        <Route path="/time" element={<Time />}></Route>
         <Route path="/pressure" element={<Pressure />}></Route>
         <Route path="/speed" element={<Speed />}></Route>
         <Route path="/volume" element={<Volume />}></Route>
         <Route path="/weight" element={<Weight />}></Route>
         <Route path="/temperature" element={<Temperature />}></Route>
-        <Route path="/timeconversion" element={<TimeConversion />}></Route>
+        <Route path="/timeconversion/" element={<TimeConversion />}></Route>
         <Route path="/length" element={<Length />}></Route>
       </Routes>
     </div>
