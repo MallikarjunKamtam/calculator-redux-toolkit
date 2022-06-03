@@ -1,16 +1,13 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import "./TimeConversion.css";
-import keysData from "../../components/keys/keysData";
+import keysData from "../keys/keysData";
 import { timeConversionActions } from "../../redux/timeConversionSlice";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 
-const TimeConversion = () => {
+function TimeConversion() {
   const dispatch = useDispatch();
 
   const { toValue, fromValue } = useSelector((state) => state.timeconversion);
-
-  const sound = new Audio(require("../../audio/soft-key.wav"));
 
   const clearAll = () => {
     dispatch(timeConversionActions.clearAll());
@@ -28,10 +25,6 @@ const TimeConversion = () => {
     dispatch(timeConversionActions.fromDispatchValue(e.target.value));
   };
 
-  const toValueHandler = (e) => {
-    dispatch(timeConversionActions.toDispatchValue(e.target.value));
-  };
-
   return (
     <div className="time-conversion-body">
       <div className="time-conversion-sub-body">
@@ -39,7 +32,6 @@ const TimeConversion = () => {
           <form>
             <select
               onChange={fromType}
-              autoFocus
               className="tc-dropdown"
               name="time"
               id="time"
@@ -88,12 +80,12 @@ const TimeConversion = () => {
         </div>
       </div>
       <div className="tc-keys">
-        <h3 onClick={clearAll} className="tc-key">
-          {keysData.operators.other.ce}
-        </h3>
+        <button type="button" onClick={clearAll} className="tc-key">
+          <h3> {keysData.operators.other.ce}</h3>
+        </button>
       </div>
     </div>
   );
-};
+}
 
 export default TimeConversion;

@@ -1,7 +1,7 @@
 import React from "react";
 
-const Power = () => {
+function Power() {
   return <div>Power</div>;
-};
+}
 
 export default Power;

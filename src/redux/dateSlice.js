@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { current } from "@reduxjs/toolkit";
 
 const initialState = {
   from: new Date().getTime(),
@@ -9,7 +8,7 @@ const initialState = {
 
 const dateSlice = createSlice({
   name: "date",
-  initialState: initialState,
+  initialState,
   reducers: {
     dateDifferance(state, action) {
       if (action.payload[1] === "from") {

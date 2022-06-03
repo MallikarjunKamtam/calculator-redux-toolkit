@@ -5,7 +5,7 @@ import Operatorkey from "./Operatorkey";
 import Memorykeys from "./Memorykeys";
 import Complexkeys from "./Complexkeys";
 
-const Keyboard = () => {
+function Keyboard() {
   return (
     <div>
       <Memorykeys />
@@ -20,6 +20,6 @@ const Keyboard = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Keyboard;

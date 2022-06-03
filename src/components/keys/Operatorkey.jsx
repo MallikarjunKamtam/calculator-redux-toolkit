@@ -1,9 +1,11 @@
 import React from "react";
 import "./operatorkey.css";
-import keys from "./keysData";
 import { useDispatch } from "react-redux";
+import keys from "./keysData";
 import { mathActions } from "../../redux/mathSlice";
-const Operatorkey = () => {
+
+function Operatorkey() {
+  // eslint-disable-next-line global-require
   const hardKey = new Audio(require("../../audio/hard-key.wav"));
   const dispatch = useDispatch();
 
@@ -15,26 +17,26 @@ const Operatorkey = () => {
 
   return (
     <div>
-      <div onClick={opKeyHandler} className="op-key arrow">
+      <div aria-hidden="true" onClick={opKeyHandler} className="op-key arrow">
         ←
       </div>
-      <div onClick={opKeyHandler} className="op-key">
+      <div aria-hidden="true" onClick={opKeyHandler} className="op-key">
         {keys.operators.basic.devide}
       </div>
-      <div onClick={opKeyHandler} className="op-key">
+      <div aria-hidden="true" onClick={opKeyHandler} className="op-key">
         {keys.operators.basic.mul}
       </div>
-      <div onClick={opKeyHandler} className="op-key">
+      <div aria-hidden="true" onClick={opKeyHandler} className="op-key">
         {keys.operators.basic.minus}
       </div>
-      <div onClick={opKeyHandler} className="op-key">
+      <div aria-hidden="true" onClick={opKeyHandler} className="op-key">
         {keys.operators.basic.plus}
       </div>
-      <div onClick={opKeyHandler} className="op-key">
+      <div aria-hidden="true" onClick={opKeyHandler} className="op-key">
         {keys.operators.basic.equal}
       </div>
     </div>
   );
-};
+}
 
 export default Operatorkey;

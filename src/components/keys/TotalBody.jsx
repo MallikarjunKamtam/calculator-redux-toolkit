@@ -3,7 +3,7 @@ import "./totalbody.css";
 import Display from "../display/Display";
 import Keyboard from "./Keyboard";
 
-const TotalBody = () => {
+function TotalBody() {
   return (
     <div className="total-body-container">
       <div className="total-body">
@@ -12,6 +12,6 @@ const TotalBody = () => {
       </div>
     </div>
   );
-};
+}
 
 export default TotalBody;

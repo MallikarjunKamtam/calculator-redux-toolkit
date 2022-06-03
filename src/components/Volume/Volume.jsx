@@ -1,7 +1,7 @@
 import React from "react";
 
-const Volume = () => {
+function Volume() {
   return <div>Volume</div>;
-};
+}
 
 export default Volume;

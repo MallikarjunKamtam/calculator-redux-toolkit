@@ -2,7 +2,7 @@ import React from "react";
 import "./memorykeys.css";
 import keys from "./keysData";
 
-const Memorykeys = () => {
+function Memorykeys() {
   return (
     <div className="memory-keys-container">
       {keys.operators.memory.map((key) => (
@@ -12,6 +12,6 @@ const Memorykeys = () => {
       ))}
     </div>
   );
-};
+}
 
 export default Memorykeys;

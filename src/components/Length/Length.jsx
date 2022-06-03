@@ -1,7 +1,7 @@
 import React from "react";
 
-const Length = () => {
+function Length() {
   return <div>Length</div>;
-};
+}
 
 export default Length;

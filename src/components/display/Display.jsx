@@ -2,7 +2,7 @@ import React from "react";
 import "./display.css";
 import { useSelector } from "react-redux";
 
-const Display = () => {
+function Display() {
   const { value } = useSelector((state) => state.math);
   const history = useSelector((state) => state.math.history);
 
@@ -14,6 +14,6 @@ const Display = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Display;

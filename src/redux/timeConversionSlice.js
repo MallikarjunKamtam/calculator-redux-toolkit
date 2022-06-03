@@ -1,10 +1,10 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   fromValue: 0,
   toValue: 0,
-  fromType: "",
-  toType: "",
+  fromType: "days",
+  toType: "weeks",
 };
 
 const microseconds = (to, value) => {
@@ -17,6 +17,7 @@ const microseconds = (to, value) => {
   if (to === "weeks") return value / 1000 / 1000 / 60 / 60 / 24 / 7;
   if (to === "months") return value / 1000 / 1000 / 60 / 60 / 24 / 30;
   if (to === "years") return value / 1000 / 1000 / 60 / 60 / 24 / 30 / 365;
+  return "";
 };
 
 const milliseconds = (to, value) => {
@@ -29,6 +30,7 @@ const milliseconds = (to, value) => {
   if (to === "weeks") return value / 1000 / 60 / 60 / 24 / 7;
   if (to === "months") return value / 1000 / 60 / 60 / 24 / 30;
   if (to === "years") return value / 1000 / 60 / 60 / 24 / 30 / 365;
+  return "";
 };
 
 const seconds = (to, value) => {
@@ -41,6 +43,7 @@ const seconds = (to, value) => {
   if (to === "weeks") return value / 60 / 60 / 24 / 7;
   if (to === "months") return value / 60 / 60 / 24 / 30;
   if (to === "years") return value / 60 / 60 / 24 / 30 / 365;
+  return "";
 };
 
 const minutes = (to, value) => {
@@ -53,6 +56,7 @@ const minutes = (to, value) => {
   if (to === "weeks") return value / 60 / 24 / 7;
   if (to === "months") return value / 60 / 24 / 30;
   if (to === "years") return value / 60 / 24 / 30 / 365;
+  return "";
 };
 
 const hours = (to, value) => {
@@ -65,6 +69,7 @@ const hours = (to, value) => {
   if (to === "weeks") return value / 24 / 7;
   if (to === "months") return value / 24 / 30;
   if (to === "years") return value / 24 / 30 / 365;
+  return "";
 };
 
 const days = (to, value) => {
@@ -77,6 +82,7 @@ const days = (to, value) => {
   if (to === "weeks") return value / 7;
   if (to === "months") return value / 30;
   if (to === "years") return value / 30 / 365;
+  return "";
 };
 
 const weeks = (to, value) => {
@@ -89,6 +95,7 @@ const weeks = (to, value) => {
   if (to === "weeks") return value;
   if (to === "months") return value / 4.345;
   if (to === "years") return value / 52.178571;
+  return "";
 };
 
 const months = (to, value) => {
@@ -102,6 +109,7 @@ const months = (to, value) => {
   if (to === "weeks") return value * 4.345;
   if (to === "months") return value;
   if (to === "years") return value / 12;
+  return "";
 };
 
 const years = (to, value) => {
@@ -114,10 +122,11 @@ const years = (to, value) => {
   if (to === "weeks") return value * 52.178571;
   if (to === "months") return value * 12;
   if (to === "years") return value;
+  return "";
 };
 const timeConversionSlice = createSlice({
   name: "timeconversion",
-  initialState: initialState,
+  initialState,
 
   reducers: {
     fromDispatchValue(state, actions) {
@@ -213,7 +222,7 @@ const timeConversionSlice = createSlice({
       }
     },
 
-    clearAll(state) {
+    clearAll() {
       window.location.reload();
     },
   },

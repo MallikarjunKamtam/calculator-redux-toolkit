@@ -1,7 +1,7 @@
 import React from "react";
 
-const DataConversion = () => {
+function DataConversion() {
   return <div>DataConversion</div>;
-};
+}
 
 export default DataConversion;

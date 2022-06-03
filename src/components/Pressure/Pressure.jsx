@@ -1,7 +1,7 @@
 import React from "react";
 
-const Pressure = () => {
+function Pressure() {
   return <div>Pressure</div>;
-};
+}
 
 export default Pressure;

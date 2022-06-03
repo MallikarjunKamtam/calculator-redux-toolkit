@@ -6,7 +6,7 @@ const initialState = {
 
 const timeSlice = createSlice({
   name: "time",
-  initialState: initialState,
+  initialState,
   reducers: {
     timer(state, actions) {
       state.time = actions.payload;

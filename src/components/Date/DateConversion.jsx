@@ -1,13 +1,12 @@
-import React from "react";
-import "./DateConversion.css";
-import { useDispatch } from "react-redux";
-import "./DateConversion.css";
-import { useSelector } from "react-redux";
-import { dateActions } from "../../redux/dateSlice";
-import moment from "moment";
-import { useState } from "react";
+import React, { useState } from "react";
 
-const DateConversion = () => {
+import { useDispatch, useSelector } from "react-redux";
+import "./DateConversion.css";
+
+import moment from "moment";
+import { dateActions } from "../../redux/dateSlice";
+
+function DateConversion() {
   const [fromDate, setFromDate] = useState(new Date().toDateString());
   const [toDate, setToDate] = useState(new Date().toDateString());
 
@@ -72,6 +71,6 @@ const DateConversion = () => {
       </div>
     </div>
   );
-};
+}
 
 export default DateConversion;

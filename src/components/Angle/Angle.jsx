@@ -1,7 +1,7 @@
 import React from "react";
 
-const Angle = () => {
+function Angle() {
   return <div>Angle</div>;
-};
+}
 
 export default Angle;

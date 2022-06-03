@@ -1,4 +1,4 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   value: 0,
@@ -9,10 +9,10 @@ const initialState = {
 
 const mathSlice = createSlice({
   name: "math",
-  initialState: initialState,
+  initialState,
   reducers: {
     updator(state, actions) {
-      const payload = actions.payload;
+      const { payload } = actions;
 
       function add(a, b) {
         return Number(a) + Number(b);
@@ -33,7 +33,7 @@ const mathSlice = createSlice({
         return Math.sqrt(Number(a));
       }
       function power(a, b) {
-        return Math.pow(Number(a), Number(b));
+        return Number(a) ** Number(b);
       }
       function inverse(a) {
         return 1 / Number(a);
@@ -42,8 +42,8 @@ const mathSlice = createSlice({
         return -a;
       }
 
-      function appendNumber(payload) {
-        if (state.currentValue.includes(".") && payload === ".") {
+      function appendNumber() {
+        if (state?.currentValue?.includes(".") && payload === ".") {
           return;
         }
         state.currentValue = state.currentValue.toString() + payload.toString();
@@ -60,10 +60,8 @@ const mathSlice = createSlice({
       }
 
       if (payload === "←") {
-        {
-          state.history.pop();
-          state.value = Math.floor(state.value / 10);
-        }
+        state.history.pop();
+        state.value = Math.floor(state.value / 10);
       }
 
       if (Number(payload) % 1 === 0 || payload === ".") {
@@ -73,7 +71,6 @@ const mathSlice = createSlice({
 
       if (payload === "+/-") {
         state.currentValue = sign(state.currentValue);
-        console.log(state.currentValue);
         state.value = state.currentValue;
       }
 
@@ -98,7 +95,7 @@ const mathSlice = createSlice({
         if (state.currentValue === "") {
           return;
         }
-        if (state.previousValue == "" && payload !== "+/-") {
+        if (state.previousValue === "" && payload !== "+/-") {
           state.previousValue = state.currentValue;
           state.value = state.currentValue;
           state.history.push(state.previousValue, payload);
@@ -118,7 +115,6 @@ const mathSlice = createSlice({
             state.currentValue = div(state.previousValue, state.currentValue);
           }
           if (payload === "^") {
-            console.log(payload);
             state.currentValue = power(state.previousValue, state.currentValue);
           }
           if (payload === "%") {

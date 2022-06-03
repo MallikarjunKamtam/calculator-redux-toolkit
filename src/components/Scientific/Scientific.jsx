@@ -1,8 +1,7 @@
 import React from "react";
-import "./scientific.css";
 
-const Scientific = () => {
+function Scientific() {
   return <div>Scientific</div>;
-};
+}
 
 export default Scientific;

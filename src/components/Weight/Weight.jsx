@@ -1,7 +1,7 @@
 import React from "react";
 
-const Weight = () => {
+function Weight() {
   return <div>Weight</div>;
-};
+}
 
 export default Weight;

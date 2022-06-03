@@ -38,13 +38,51 @@
   margin: 0;
 }
 
-.header-heading {
-  margin: 0;
-  background-color: black;
-}
-
 .header-item:hover {
   transform: scale(1.05);
   color: orange;
   transition: all 1s;
+}
+
+.header-ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.calculator-head {
+  display: none;
+  height: 50px;
+}
+
+@media (max-width: 1200px) {
+  .header-ul {
+    display: block;
+    list-style-type: none;
+    position: absolute;
+    left: 0px;
+    top: 43px;
+    background-color: rgba(0, 0, 0, 1);
+    text-align: center;
+    margin-left: 0;
+    overflow-y: scroll;
+  }
+  .calculator-head {
+    display: block;
+    position: absolute;
+    margin-left: 50px;
+    margin: 0;
+    left: 0px;
+    top: 0px;
+    width: 205px;
+    background-color: black;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  .header-li {
+    margin: 15px 0;
+    text-align: center;
+  }
 }
